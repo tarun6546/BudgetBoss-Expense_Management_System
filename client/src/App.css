@@ -1,0 +1,140 @@
+/* Additional App-specific styles */
+.App {
+  text-align: left;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Focus styles */
+button:focus,
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Page transitions */
+.page-enter {
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Loading states */
+.loading {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Success states */
+.success {
+  border-color: #27ae60 !important;
+  background-color: rgba(39, 174, 96, 0.1);
+}
+
+/* Error states */
+.error {
+  border-color: #e74c3c !important;
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+/* Card Layout Fixes */
+.dashboard-card,
+.chart-container,
+.ant-card {
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+
+.dashboard-card *,
+.chart-container *,
+.ant-card * {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Text overflow handling */
+.stat-value,
+.card-title,
+.chart-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Responsive text sizing */
+@media (max-width: 768px) {
+  .stat-value {
+    font-size: 1.5rem !important;
+  }
+  
+  .card-title,
+  .chart-title {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .sidebar,
+  .header,
+  .footer,
+  .btn,
+  button {
+    display: none !important;
+  }
+  
+  .main-content {
+    margin-left: 0 !important;
+  }
+  
+  .dashboard-card,
+  .chart-container {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
