@@ -168,6 +168,7 @@ const Navbar = () => {
             BudgetBoss
           </Title>
         </motion.div>
+        
 
         {/* Desktop Menu */}
         <div style={{ display: 'flex', alignItems: 'center' }}>
