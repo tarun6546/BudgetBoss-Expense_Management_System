@@ -121,8 +121,8 @@ const LandingPage = () => {
     <div style={{
       minHeight: '100vh',
       background: theme === 'dark'
-        ? 'linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)'
-        : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+        ? 'linear-gradient(135deg, #0a0a23 0%, #1a0a2e 25%, #2a1a3e 50%, #1a2e3e 75%, #0a2e4e 100%)'
+        : 'linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 25%, #45b7d1 50%, #96ceb4 75%, #feca57 100%)'
     }}>
       <Navbar />
 
@@ -141,8 +141,8 @@ const LandingPage = () => {
           right: 0,
           bottom: 0,
           background: theme === 'dark'
-            ? 'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%)'
-            : 'radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)',
+            ? 'radial-gradient(circle at 20% 80%, rgba(255, 107, 107, 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(78, 205, 196, 0.2) 0%, transparent 50%)'
+            : 'radial-gradient(circle at 20% 80%, rgba(255, 202, 87, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(69, 183, 209, 0.15) 0%, transparent 50%)',
           zIndex: 1
         }} />
 
@@ -203,9 +203,9 @@ const LandingPage = () => {
                   padding: '0 40px',
                   fontSize: '1.2rem',
                   borderRadius: '30px',
-                  background: 'linear-gradient(45deg, #667eea, #764ba2)',
+                  background: 'linear-gradient(45deg, #ff6b6b, #4ecdc4)',
                   border: 'none',
-                  boxShadow: '0 8px 25px rgba(102, 126, 234, 0.4)'
+                  boxShadow: '0 8px 25px rgba(255, 107, 107, 0.4)'
                 }}
               >
                 Get Started Free
@@ -467,7 +467,7 @@ const LandingPage = () => {
       {/* CTA Section */}
       <section id="cta" style={{
         padding: '100px 20px',
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)',
+        background: 'linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 30%, #45b7d1 60%, #feca57 100%)',
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden'
