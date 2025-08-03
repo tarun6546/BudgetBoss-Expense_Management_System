@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "BudgetBoss - Modern expense management and budget tracking application",
   "main": "server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\" "
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "vercel-build": "echo 'No build step required'"
   },
   "keywords": [],
   "author": "Tarun Varshney",
