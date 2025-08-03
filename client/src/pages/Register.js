@@ -30,7 +30,7 @@ const Register = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.email || !formData.password) {
       message.error('Please fill all fields');
       return;
@@ -48,7 +48,7 @@ const Register = () => {
 
     try {
       setLoading(true);
-      const apiUrl = process.env.REACT_APP_API_URL 
+      const apiUrl = process.env.REACT_APP_API_URL
         ? `${process.env.REACT_APP_API_URL}/api/users/v1/register`
         : '/api/users/v1/register';
       await axios.post(apiUrl, {
@@ -56,7 +56,7 @@ const Register = () => {
         email: formData.email,
         password: formData.password
       });
-      
+
       message.success('Registration successful! Please login.');
       setLoading(false);
       navigate('/login');
@@ -69,12 +69,12 @@ const Register = () => {
   return (
     <div className="auth-page">
       {loading && <Spinner />}
-      
+
       <div className="auth-container">
         <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-          <div style={{ 
-            fontSize: '3rem', 
-            marginBottom: '10px' 
+          <div style={{
+            fontSize: '3rem',
+            marginBottom: '10px'
           }}>💼</div>
           <h1 className="auth-title">Create Account</h1>
           <p style={{ color: '#7f8c8d' }}>Join us to start managing your expenses</p>

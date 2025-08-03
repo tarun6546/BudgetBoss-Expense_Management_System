@@ -28,7 +28,7 @@ const Login = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    
+
     if (!formData.email || !formData.password) {
       message.error('Please fill all fields');
       return;
@@ -36,12 +36,12 @@ const Login = () => {
 
     try {
       setLoading(true);
-      const apiUrl = process.env.REACT_APP_API_URL 
+      const apiUrl = process.env.REACT_APP_API_URL
         ? `${process.env.REACT_APP_API_URL}/api/users/v1/login`
         : '/api/users/v1/login';
       const { data } = await axios.post(apiUrl, formData);
       setLoading(false);
-      
+
       message.success('Login successful!');
       localStorage.setItem('user', JSON.stringify({ ...data.user, password: "" }));
       navigate('/dashboard');
@@ -54,12 +54,12 @@ const Login = () => {
   return (
     <div className="auth-page">
       {loading && <Spinner />}
-      
+
       <div className="auth-container">
         <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-          <div style={{ 
-            fontSize: '3rem', 
-            marginBottom: '10px' 
+          <div style={{
+            fontSize: '3rem',
+            marginBottom: '10px'
           }}>💼</div>
           <h1 className="auth-title">Welcome Back</h1>
           <p style={{ color: '#7f8c8d' }}>Sign in to your expense management account</p>
