@@ -36,7 +36,10 @@ const Login = () => {
 
     try {
       setLoading(true);
-      const { data } = await axios.post('http://localhost:8080/api/users/v1/login', formData);
+      const apiUrl = process.env.REACT_APP_API_URL 
+        ? `${process.env.REACT_APP_API_URL}/api/users/v1/login`
+        : '/api/users/v1/login';
+      const { data } = await axios.post(apiUrl, formData);
       setLoading(false);
       
       message.success('Login successful!');
