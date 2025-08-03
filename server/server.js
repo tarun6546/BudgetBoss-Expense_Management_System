@@ -1,9 +1,9 @@
-const express = require('express');
-const cors = require('cors');
-const morgan = require('morgan');
-const dotenv = require('dotenv');
-const colors = require('colors');
-const connectDb = require('./config/connectDb');
+const express = require("express");
+const cors = require("cors");
+const morgan = require("morgan");
+const dotenv = require("dotenv");
+const colors = require("colors");
+const connectDb = require("./config/connectDb");
 //config dot env file
 dotenv.config();
 
@@ -44,24 +44,21 @@ const app = express();
 //   optionsSuccessStatus: 200
 // };
 
-
-app.use(cors({
-  origin: "*"
-}));
-app.use(express.json({ limit: '10mb' }));
-app.use(express.urlencoded({ extended: true, limit: '10mb' }));
-app.use(morgan('dev'));
+app.use(cors());
+app.use(express.json({ limit: "10mb" }));
+app.use(express.urlencoded({ extended: true, limit: "10mb" }));
+app.use(morgan("dev"));
 
 //routes
 //user routes
-app.use('/api/users/v1', require('./routes/userRoute'));
+app.use("/api/users/v1", require("./routes/userRoute"));
 //transaction routes
-app.use('/api/users/v1', require('./routes/transactionRoutes'));
+app.use("/api/users/v1", require("./routes/transactionRoutes"));
 //budget routes
-app.use('/api/users/v1', require('./routes/budgetRoutes'));
+app.use("/api/users/v1", require("./routes/budgetRoutes"));
 
-app.get('/', (req, res) => {
-  res.send('<h1>Welcome to Expanse Management System</h1>');
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to Expanse Management System</h1>");
 });
 
 //port
