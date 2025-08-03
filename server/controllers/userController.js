@@ -31,10 +31,10 @@ const registerController = async (req, res) => {
       newUser,
     });
   } catch (error) {
-    console.log(error);
+    console.log('Registration error:', error);
     res.status(400).json({
-      sucess: false,
-      error,
+      success: false,
+      error: error.message || 'Registration failed',
     });
   }
 };
